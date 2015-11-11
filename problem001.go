@@ -6,7 +6,7 @@ import "fmt"
 // Find the sum of all the multiples of 3 or 5 below 1000.
 
 func main() {
-	m := multiples(10)
+	m := multiples(1000)
 	s := sum(m)
 
 	fmt.Println(s)
@@ -15,7 +15,7 @@ func main() {
 func multiples(n int) []int {
 	var multiples []int
 	for i := 1; i < n; i++ {
-		if (i%3 == 0) || (i%5 == 0) {
+		if i%3 == 0 || i%5 == 0 {
 			multiples = append(multiples, i)
 		}
 	}
